@@ -72,7 +72,7 @@ async def start(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
         except ChatAdminRequired:
-            logger.error("Mᴀᴋᴇ sᴜʀᴇ Bᴏᴛ ɪs ᴀᴅᴍɪɴ ɪɴ Fᴏʀᴄᴇsᴜʙ ᴄʜᴀɴɴᴇʟ")
+            logger.error("Dᴜᴅᴇ, Yᴏᴜ'ʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ Tʜᴇ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ. Pʟᴇᴀsᴇ Cʟɪᴄᴋ Tʜɪs Bᴜᴛᴛᴏɴ Aғᴛᴇʀ Jᴏɪɴ Tʜᴇ Cʜᴀɴɴᴇʟ.")
             return
         btn = [
             [
@@ -91,7 +91,7 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ ↻", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ɪɴ ᴏᴜʀ Bᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ sᴏ ʏᴏᴜ ᴅᴏɴ'ᴛ ɢᴇᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ғɪʟᴇ...\n\nIғ ʏᴏᴜ ᴡᴀɴᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ғɪʟᴇ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ '❆ Jᴏɪɴ Oᴜʀ Bᴀᴄᴋ-Uᴘ Cʜᴀɴɴᴇʟ ❆' ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴀɴᴅ ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ '↻ Tʀʏ Aɢᴀɪɴ' ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ...\n\nTʜᴇɴ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ғɪʟᴇs...**",
+            text="**Cʟɪᴄᴋ oɴ 'Jᴏɪɴ Tʜɪs Cʜᴀɴɴᴇʟ' Bᴜᴛᴛᴏɴ Bᴇʟᴏᴡ Aɴᴅ Jᴏɪɴ Tʜᴇ Cʜᴀɴɴᴇʟ Aɴᴅ Tʜᴇɴ Pʀᴇss 'Tʀʏ Aɢᴀɪɴ' Bᴜᴛᴛᴏɴ Tᴏ Gᴇᴛ Tʜᴇ Mᴏᴠɪᴇ‌‌\n\nതാഴെ കാണുന്ന 'JOIN THIS CHANNEL' എന്ന ബട്ടണിൽ ക്ലിക്ക് ചെയ്ത് ചാനലിൽ ജോയിൻ ചെയ്ത ശേഷം 'TRY AGAIN' എന്ന ബട്ടണിൽ അമർത്തിയാൽ സിനിമ ലഭിക്കുന്നതാണ്**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
